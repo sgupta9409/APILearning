@@ -43,7 +43,7 @@ public class RequestAndResponseSpecification {
 		
 		.basePath("/booking")
 		.body("{\r\n"
-			+ "    \"firstname\" : \"Stage\",\r\n"
+			+ "    \"firstname\" : \"Shubham\",\r\n"
 			+ "    \"lastname\" : \"Brown\",\r\n"
 			+ "    \"totalprice\" : 111,\r\n"
 			+ "    \"depositpaid\" : true,\r\n"
