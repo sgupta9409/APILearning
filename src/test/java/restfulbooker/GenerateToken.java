@@ -1,12 +1,14 @@
 package restfulbooker;
 
+import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 public class GenerateToken {
 
-	public static void main(String[] args) {
-		
+	@Test
+	public void generateToken() {		
 		RestAssured
 			.given()
 			.log()

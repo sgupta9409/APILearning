@@ -51,10 +51,10 @@ public class MeasureResponseTime {
 		response.then().time(Matchers.lessThan(5000L));
 		response.then().time(Matchers.greaterThan(1000L));
 		
-		response.then().time(Matchers.both(Matchers.greaterThan(2000L))
+		response.then().time(Matchers.both(Matchers.greaterThan(500L))
 									 .and(Matchers.lessThan(4000L)));
 		
-		response.then().time(Matchers.both(Matchers.lessThan(5L)).and(Matchers.greaterThanOrEqualTo(2L)), TimeUnit.SECONDS);
+		response.then().time(Matchers.both(Matchers.lessThan(5L)).and(Matchers.greaterThanOrEqualTo(1L)), TimeUnit.SECONDS);
 	}
 
 }

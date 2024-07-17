@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ility Test Env API Suite">
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="restfulbooker.CreateBookingWithChaining" />
+			<class name="restfulbooker.CreateBookingWithoutChaining" />
+			<class name="restfulbooker.ExtractResponseAsString" />
+			<class name="restfulbooker.GenerateToken" />
+			<class name="restfulbooker.MultipleBookings" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
