@@ -32,7 +32,7 @@
 				<version>3.3.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/xmlconfigfiles/${foldername}/${envname}.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/xmlconfigfiles/${foldername}/${envname}/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -55,6 +55,24 @@
 			<version>${testngVersion}</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!-- *********************************Selenium Dependencies**************************** -->
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.22.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-manager -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-manager</artifactId>
+			<version>4.22.0</version>
+		</dependency>
+
+
 
 	</dependencies>
 </project>

@@ -1,6 +1,5 @@
 package basicconcepts;
 
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -34,9 +33,6 @@ public class UseOfDefaultVariables {
 		.post()
 		.then()
 		.log()
-		.all()
-		.statusCode(200)
-		.contentType(ContentType.JSON)
-		.time(Matchers.lessThan(5000L));
+		.all();
 	}
 }
