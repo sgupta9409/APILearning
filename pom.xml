@@ -8,6 +8,10 @@
 
 	<properties>
 		<!-- <maven.compiler.source>1.8</maven.compiler.source> <maven.compiler.target>1.8</maven.compiler.target> -->
+		<xmlFolderName>${foldername}</xmlFolderName>
+		<env>${envname}</env>
+		<restassuredVersion>5.5.0</restassuredVersion>
+		<testngVersion>7.6.1</testngVersion>
 	</properties>
 
 	<build>
@@ -28,7 +32,7 @@
 				<version>3.3.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/xmlconfigfiles/${foldername}/${envname}.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -40,7 +44,7 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
-			<version>5.5.0</version>
+			<version>${restassuredVersion}</version>
 			<scope>test</scope> <!-- scope means rest assured method only be used in src test folders -->
 		</dependency>
 
@@ -48,7 +52,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.6.1</version>
+			<version>${testngVersion}</version>
 			<scope>test</scope>
 		</dependency>
 
