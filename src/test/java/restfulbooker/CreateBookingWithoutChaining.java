@@ -1,5 +1,7 @@
 package restfulbooker;
 
+import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -8,9 +10,9 @@ import io.restassured.specification.RequestSpecification;
 
 public class CreateBookingWithoutChaining {
 
-	public static void main(String[] args) {
+	@Test
+	public void createBooking() {
 		//Build Request
-		
 		RequestSpecification requestSpecification = RestAssured.given().log().all();
 		
 		requestSpecification.baseUri("https://restful-booker.herokuapp.com");
@@ -28,14 +30,12 @@ public class CreateBookingWithoutChaining {
 				+ "    },\r\n"
 				+ "    \"additionalneeds\" : \"Breakfast\"\r\n"
 				+ "}");
+		//Hit request and get Response
 		Response response = requestSpecification.post();
 		
+		//Validate Response
 		ValidatableResponse validatableResponse = response.then().log().all();
 		validatableResponse.statusCode(200);
-		//Hit request and get Response
-		
-		//Validate Response
-
 	}
 
 }
