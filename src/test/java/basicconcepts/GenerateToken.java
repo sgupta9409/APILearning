@@ -1,4 +1,4 @@
-package restfulbooker;
+package basicconcepts;
 
 import org.testng.annotations.Test;
 
@@ -7,13 +7,16 @@ import io.restassured.http.ContentType;
 
 public class GenerateToken {
 
+	// In this test case we don't pass base URI as we are executing this in Test
+	// We are getting Base URI from UseIfDefaultVariable class
+	// We are overwrite the value of basePath
+	
 	@Test
 	public void generateToken() {		
 		RestAssured
 			.given()
 			.log()
 			.all()
-			.baseUri("https://restful-booker.herokuapp.com")
 			.basePath("/auth")
 			.contentType(ContentType.JSON)
 			.body("{\r\n"

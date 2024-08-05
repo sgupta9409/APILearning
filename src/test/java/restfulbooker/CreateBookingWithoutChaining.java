@@ -2,6 +2,7 @@ package restfulbooker;
 
 import org.testng.annotations.Test;
 
+import ility.api.utilities.RestUtility;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -30,8 +31,11 @@ public class CreateBookingWithoutChaining {
 				+ "    },\r\n"
 				+ "    \"additionalneeds\" : \"Breakfast\"\r\n"
 				+ "}");
+		
+		RestUtility.printRequestLogInReport(requestSpecification);
 		//Hit request and get Response
 		Response response = requestSpecification.post();
+		RestUtility.printResponseLogInReport(response);
 		
 		//Validate Response
 		ValidatableResponse validatableResponse = response.then().log().all();
