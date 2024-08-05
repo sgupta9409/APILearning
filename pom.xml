@@ -45,7 +45,6 @@
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>${restassuredVersion}</version>
-			<scope>test</scope> <!-- scope means rest assured method only be used in src test folders -->
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -53,9 +52,15 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testngVersion}</version>
-			<scope>test</scope>
+			<!-- <scope>test</scope> scope means rest assured method only be used in src test folders -->
+			
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.9</version>
+		</dependency>
 
 		<!-- *********************************Selenium Dependencies**************************** -->
 
