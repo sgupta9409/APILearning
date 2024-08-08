@@ -2,12 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Ility Stage Env API Suite">
 
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="basicconcepts.MeasureResponseTime"/>
-      <class name="basicconcepts.RequestAndResponseSpecification"/>
-      <class name="basicconcepts.RequestAndResponseSpecification2"/>
-      <class name="basicconcepts.UseOfDefaultVariables"/>
-    </classes>
-  </test> <!-- Test -->
+	<listeners>
+		<listener class-name="reporting.Setup"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="basicconcepts.MeasureResponseTime" />
+			<class name="basicconcepts.RequestAndResponseSpecification" />
+			<class name="basicconcepts.RequestAndResponseSpecification2" />
+			<class name="basicconcepts.UseOfDefaultVariables" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

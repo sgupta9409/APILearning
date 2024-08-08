@@ -1,8 +1,9 @@
 package ility.web.testcases;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
-
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.PageLoadStrategy;
@@ -35,15 +36,26 @@ public class BaseClass {
 	@Parameters({ "browser", "URL" })
 	@BeforeSuite
 	public WebDriver setUp(String browser, String URL) throws Exception {
+		deleteExstingReports();
 		driver = launchBrowser(browser);
 		launchURL(URL);
 		return driver;
 
 	}
-	
+
 	@AfterSuite
 	public void tearDown() {
 		driver.quit();
+	}
+	
+	public static void deleteExstingReports() {
+		try {
+
+			FileUtils.deleteDirectory(new File(".\\reports"));
+		}catch(IOException e) {
+
+			System.out.println("Download directory not found to delete.");
+		}
 	}
 
 	public WebDriver launchBrowser(String browser) throws Exception {
