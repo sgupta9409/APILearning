@@ -7,8 +7,8 @@
 	</listeners>
 	<test thread-count="5" name="RetargetCommonRestApiAutomationFramework">
 		<classes>
-			<class name="restfulbooker.CreateBookingWithChaining" />
 			<class name="restfulbooker.CreateBookingWithoutChaining" />
+			<class name="restfulbooker.CreateBookingWithChaining" />
 			<class name="restfulbooker.ExtractResponseAsString" />
 			<class name="restfulbooker.MultipleBookings" />
 		</classes>
