@@ -48,7 +48,6 @@
 			<artifactId>rest-assured</artifactId>
 			<version>${restassuredVersion}</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
